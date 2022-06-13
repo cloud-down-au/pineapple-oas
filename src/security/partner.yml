@@ -1,0 +1,11 @@
+description: |
+  For more details see ....
+type: oauth2
+flows:
+  clientCredentials:
+    tokenUrl: https://auth.addpineapple.com/oauth/token
+    scopes:
+      create:customer: "Create a new customer"
+      delete:customer: "Delete an existing customer"
+      read:customers: "Get a list of customers"
+      update:score: "Update the customer's financial wellbeing score"

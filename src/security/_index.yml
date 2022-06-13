@@ -1,0 +1,5 @@
+customer:
+  $ref: "./customer.yml"
+
+partner:
+  $ref: "./partner.yml"

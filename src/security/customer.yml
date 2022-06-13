@@ -1,0 +1,14 @@
+description: |
+  For more details see ....
+type: oauth2
+flows:
+  authorizationCode:
+    authorizationUrl: https://auth.addpineapple.com/authorize
+    tokenUrl: https://auth.addpineapple.com/oauth/token
+    scopes:
+      delete:customer: "Delete an existing customer"
+      read:accounts: "Read a list of customer accounts"
+      read:customer: "Read details of a customer"
+      read:customer_pseudonyms: "Read list of customer IDs in third party systems"
+      read:score: "Read a customer's financial wellbeing score"
+      update:customer: "Update a customer's details"
