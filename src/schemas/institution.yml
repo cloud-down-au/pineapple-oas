@@ -1,0 +1,16 @@
+description: |
+  An institution holds financial data and provides financial services. They are the 
+  ultimate source of truth for accounts and transaction data.
+  
+  Pineapple sources data from an institution via a provider eg: Basiq.
+type: object
+properties:
+  key:
+    type: string
+    description: A provider specific identifier
+    example: AU00000
+
+  displayName:
+    type: string
+    description: A provider specific display name.
+    example: The Best Bank

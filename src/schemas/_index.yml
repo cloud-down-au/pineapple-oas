@@ -1,0 +1,14 @@
+Account:
+  $ref: "./accounts/account.yml"
+
+AccountProvider:
+  $ref: "./accounts/provider.yml"
+
+Institution:
+  $ref: "./institution.yml"
+
+ProviderAggregationState:
+  $ref: "./provider/aggregation-state.yml"
+
+ResourceIdentifier:
+  $ref: "./resource-identifier.yml"

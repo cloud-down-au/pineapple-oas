@@ -1,0 +1,106 @@
+description: |
+  Represents a copy of an account held with a financial institution.
+  
+  Data is current as of the last time Pineapple synchronised with the provider of the
+  data (eg: Basiq)
+type: object
+properties:
+  accountName:
+    type: string
+    description: |
+      The name of the account given by the owning institution. This is often non editable
+      by the customer.
+    example: Savings Account
+
+  accountNumber:
+    type: string
+    description: The account number with the owning institution.
+    example: "12345678"
+
+  bsb:
+    type: string
+    description: |
+      If applicable, BSB of the account, or blank. May or may not contain a dash.
+    example: 123-456
+
+  createdAt:
+    type: string
+    format: date-time
+    description: The timestamp of when the account was entered into Pineapple.
+    example: "2021-09-08T19:01:06.659Z"
+
+  currentBalance:
+    type: string
+    description: The amount in the account
+    example: "100.23"
+
+  id:
+    $ref: "../resource-identifier.yml"
+
+  institution:
+    $ref: "../institution.yml"
+
+  lastUpdatedAt:
+    type: string
+    format: date-time
+    description: The timestamp of when the account was last updated in Pineapple.
+    example: "2021-09-08T19:01:06.659Z"
+
+  nickname:
+    type: string
+    description: |
+      An account nickname. Defaults to `accountName`, but is often editable by the 
+      customer.
+    example: Holiday Funds
+
+  provider:
+    $ref: "./provider.yml"
+
+  subtype:
+    description: |
+      The designated sub type of account from the provider. The enum is not exhaustive and new
+      account subtypes may appear over time.
+    type: string
+    enum:
+      - subtype
+      - savings
+      - credit_card
+      - home_loan
+      - checking
+      - stored_value
+      - term_deposit
+      - transaction
+      - investment
+      - superannuation
+      - loan
+      - foreign
+    example: savings
+
+  type:
+    description: |
+      The designated type of account from the provider. The enum is not exhaustive and new
+      account types may appear over time.
+    type: string
+    enum:
+      - bank
+      - credit_card
+      - loan
+      - stored_value
+      - investment
+      - superannuation
+      - foreign
+    example: bank
+
+required:
+  - accountName
+  - accountNumber
+  - bsb
+  - createdAt
+  - currentBalance
+  - id
+  - institution
+  - lastUpdatedAt
+  - nickname
+  - provider
+  - subtype
+  - type

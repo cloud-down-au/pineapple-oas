@@ -1,0 +1,8 @@
+description: |
+  What state the provider is in with respect to aggregating financial data.
+type: string
+enum:
+  - ERROR
+  - RUNNING
+  - SUCCESS
+example: SUCCESS
