@@ -1,0 +1,21 @@
+get:
+  summary: List Customer Accounts
+  description: Retrieves a list of accounts for a customer.
+  operationId: getCustomerAccounts
+  security:
+    - customer:
+        - read:accounts
+  tags:
+    - Customer
+  responses:
+    "200":
+      $ref: "../responses/accounts/accounts-list.yml"
+
+    "401":
+      $ref: "../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../responses/errors/forbidden.yml"
+
+    "500":
+      $ref: "../responses/errors/server-error.yml"
