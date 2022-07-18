@@ -1,0 +1,27 @@
+description: |
+  Indicates that the server understood the request but refuses to authorize it
+  
+  If authentication credentials were provided in the request, the server considers them 
+  insufficient to  grant access.
+  
+  See RFC7231 - https://tools.ietf.org/html/rfc7231#section-6.5.3
+content:
+  application/json:
+    schema:
+      properties:
+        statusCode:
+          type: number
+          description: The HTTP status code
+          example: 403
+        error:
+          type: string
+          description: The HTTP status message
+          example: "Forbidden"
+        message:
+          type: string
+          description: |
+            A message from the server indicating the cause or possible resolution of the error.
+          example: "Forbidden resource"
+      required:
+        - statusCode
+        - error

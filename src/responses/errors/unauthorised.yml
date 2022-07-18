@@ -1,0 +1,27 @@
+description: |
+  Indicates that the request has not been applied because it lacks valid authentication 
+  credentials for the target resource.
+  
+  The user agent MAY repeat the request with a new or replaced Authorization header field.
+  
+  See RFC7235 - https://tools.ietf.org/html/rfc7235#section-3.1
+content:
+  application/json:
+    schema:
+      properties:
+        statusCode:
+          type: number
+          description: The HTTP status code
+          example: 401
+        error:
+          type: string
+          description: The HTTP status message
+          example: "Unauthorized"
+        message:
+          type: string
+          description: |
+            A message from the server indicating the cause or possible resolution of the error.
+          example: "Missing bearer token"
+      required:
+        - statusCode
+        - error
