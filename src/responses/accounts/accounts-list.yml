@@ -1,0 +1,5 @@
+description: List of accounts for a customer
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/accounts/accounts-list.yml"
