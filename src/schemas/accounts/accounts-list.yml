@@ -1,0 +1,13 @@
+description: |
+  A list of accounts for a given customer
+type: object
+properties:
+  accounts:
+    type: array
+    items:
+      $ref: "./account.yml"
+  meta:
+    $ref: "./account-metadata.yml"
+required:
+  - accounts
+  - meta
