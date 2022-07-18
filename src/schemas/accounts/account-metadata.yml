@@ -1,0 +1,13 @@
+description: |
+  Meta data about a customer's accounts list
+type: object
+properties:
+  lastSynchroniseAttemptTime:
+    type: string
+    format: date-time
+    description: |
+      The timestamp of when Pineapple last tried to synchronise the customer's accounts.
+    example: "2021-09-08T19:01:06.659Z"
+
+required:
+  - lastSynchroniseAttemptTime
