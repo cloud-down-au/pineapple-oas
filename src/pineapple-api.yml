@@ -1,0 +1,43 @@
+openapi: "3.0.3"
+
+info:
+  title: Pineapple API
+  version: 0.1.0
+  description: |
+    Specification for Pineapple API
+
+  contact:
+    name: Pineapple
+    email: whatsup@addpineapple.com
+    url: https://www.addpineapple.com
+
+  license:
+    name: UNLICENSED
+    url: https://example.com/license-url
+
+servers:
+  - url: https://api.addpineapple.com/v0
+    description: Production API
+
+  - url: https://api-staging.addpineapple.com/v0
+    description: Test API for Pineapple partners
+
+tags:
+  - name: Customer
+    description: |
+      Resources that relates to an individual customer. Requires an access token for that specific customer.
+
+  - name: Partner
+    description: |
+      Resources that can be used by a Pineapple Partner. Requires an access token that represents the partner.
+
+components:
+  securitySchemes:
+    $ref: "./security/_index.yml"
+
+  schemas:
+    $ref: "./schemas/_index.yml"
+
+paths:
+  /accounts:
+    $ref: "./resources/accounts.yml"
