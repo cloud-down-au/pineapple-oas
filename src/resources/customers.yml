@@ -1,0 +1,21 @@
+get:
+  summary: List Customers
+  description: Retrieves list of Pineapple customers.
+  operationId: getCustomers
+  security:
+    - partner:
+        - read:customers
+  tags:
+    - Partner
+  responses:
+    "200":
+      $ref: "../responses/customers/customers-list.yml"
+
+    "401":
+      $ref: "../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../responses/errors/forbidden.yml"
+
+    "500":
+      $ref: "../responses/errors/server-error.yml"

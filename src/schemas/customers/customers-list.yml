@@ -1,0 +1,5 @@
+description: |
+  A list of customers
+type: array
+items:
+  $ref: "./customer.yml"

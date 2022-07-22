@@ -41,3 +41,5 @@ components:
 paths:
   /accounts:
     $ref: "./resources/accounts.yml"
+  /customers:
+    $ref: "./resources/customers.yml"

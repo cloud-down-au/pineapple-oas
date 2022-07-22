@@ -1,0 +1,5 @@
+description: List of customers
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/customers/customers-list.yml"

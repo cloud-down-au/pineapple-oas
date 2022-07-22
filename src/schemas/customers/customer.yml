@@ -1,0 +1,38 @@
+description: |
+  Represents details of a Pineapple customer.
+type: object
+properties:
+  acceptedDataSharingAgreement:
+    type: boolean
+    description: Whether the customer has accepted Pineapple's Data Sharing Agreement
+    example: true
+
+  acceptedPrivacyAgreement:
+    type: boolean
+    description: Whether the customer has accepted Pineapple's Privacy Agreement
+    example: true
+
+  acceptedTermsAndConditions:
+    type: boolean
+    description: Whether the customer has accepted Pineapple's Terms and Conditions
+    example: true
+
+  displayName:
+    type: string
+    description: The name the customer prefers to be called.
+    example: "Bruce W"
+
+  id:
+    $ref: "../resource-identifier.yml"
+
+  username:
+    type: string
+    description: The customers username.
+    example: "bruce@wayneenterprises.com"
+required:
+  - acceptedDataSharingAgreement
+  - acceptedPrivacyAgreement
+  - acceptedTermsAndConditions
+  - displayName
+  - id
+  - username
