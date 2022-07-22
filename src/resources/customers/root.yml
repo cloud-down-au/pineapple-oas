@@ -9,13 +9,13 @@ get:
     - Partner
   responses:
     "200":
-      $ref: "../responses/customers/customers-list.yml"
+      $ref: "../../responses/customers/customers-list.yml"
 
     "401":
-      $ref: "../responses/errors/unauthorised.yml"
+      $ref: "../../responses/errors/unauthorised.yml"
 
     "403":
-      $ref: "../responses/errors/forbidden.yml"
+      $ref: "../../responses/errors/forbidden.yml"
 
     "500":
-      $ref: "../responses/errors/server-error.yml"
+      $ref: "../../responses/errors/server-error.yml"

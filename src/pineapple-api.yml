@@ -40,6 +40,6 @@ components:
 
 paths:
   /accounts:
-    $ref: "./resources/accounts.yml"
+    $ref: "./resources/accounts/root.yml"
   /customers:
-    $ref: "./resources/customers.yml"
+    $ref: "./resources/customers/root.yml"
