@@ -1,0 +1,55 @@
+description: |
+  An account provider is a Provider that Pineapple specifically sources account data from, for
+  example Basiq.
+  
+  'Aggregation' is the act of the account provider connecting to the owning financial institution
+  and sourcing account and transaction information.
+allOf:
+  - $ref: "../provider/provider.yml"
+  - type: object
+    properties:
+      aggregationState:
+        $ref: "../provider/aggregation-state.yml"
+
+      aggregationStatus:
+        description: |
+          A provider specific value indicating the outcome of the last attempt to aggregate data
+          from the owning institution.
+        type: string
+        example: "success"
+
+      createdAt:
+        type: string
+        format: date-time
+        description: The timestamp of when the account was first aggregated by the provider.
+        example: "2021-09-08T19:01:06.659Z"
+
+      lastAggregationAttemptAt:
+        type: string
+        format: date-time
+        description: The timestamp of when the provider last tried to aggregate the account data.
+        example: "2021-09-08T19:01:06.659Z"
+
+      lastAggregationSuccessAt:
+        type: string
+        format: date-time
+        description: |
+          The timestamp of when account data was last successfully aggregated.
+          
+          If aggregation attempts routinely fail, this value can help Pineapple clients know
+          how old the account data is.
+        example: "2021-09-08T19:01:06.659Z"
+
+      lastUpdatedAt:
+        type: string
+        format: date-time
+        description: The timestamp of when the account was last updated in the providers system.
+        example: "2021-09-08T19:01:06.659Z"
+
+    required:
+      - aggregationState
+      - aggregationStatus
+      - createdAt
+      - lastAggregationAttemptAt
+      - lastAggregationSuccessAt
+      - lastUpdatedAt

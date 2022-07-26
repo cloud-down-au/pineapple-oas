@@ -2,10 +2,13 @@ Account:
   $ref: "./accounts/account.yml"
 
 AccountProvider:
-  $ref: "./accounts/provider.yml"
+  $ref: "./accounts/accounts-provider.yml"
 
 Institution:
   $ref: "./institution.yml"
+
+Provider:
+  $ref: "./provider/provider.yml"
 
 ProviderAggregationState:
   $ref: "./provider/aggregation-state.yml"

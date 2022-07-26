@@ -54,7 +54,7 @@ properties:
     example: Holiday Funds
 
   provider:
-    $ref: "./provider.yml"
+    $ref: "./accounts-provider.yml"
 
   subtype:
     description: |
