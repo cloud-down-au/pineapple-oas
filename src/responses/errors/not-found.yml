@@ -1,0 +1,25 @@
+description: |
+  Indicates that the origin server did not find a current representation for the target resource
+  or is not willing to disclose that one exists.
+  
+  See RFC7231 - https://tools.ietf.org/html/rfc7231#section-6.5.4
+content:
+  application/json:
+    schema:
+      properties:
+        statusCode:
+          type: number
+          description: The HTTP status code
+          example: 404
+        error:
+          type: string
+          description: The HTTP status message
+          example: "Not Found"
+        message:
+          type: string
+          description: |
+            A message from the server indicating the cause or possible resolution of the error.
+          example: "Resource not found"
+      required:
+        - statusCode
+        - error
