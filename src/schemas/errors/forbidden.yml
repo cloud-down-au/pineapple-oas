@@ -1,0 +1,20 @@
+# Generated from template - do not manually edit
+description: Error returned from the API server
+type: object
+properties:
+  statusCode:
+    type: number
+    description: The HTTP status code
+    example: 403
+  error:
+    type: string
+    description: The HTTP status message
+    example: Forbidden
+  message:
+    type: string
+    description: |
+      A message from the server indicating the cause or possible resolution of the error.
+    example: Forbidden resource
+required:
+  - statusCode
+  - error

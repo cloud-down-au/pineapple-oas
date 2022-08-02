@@ -6,20 +6,4 @@ description: |
 content:
   application/json:
     schema:
-      properties:
-        statusCode:
-          type: number
-          description: The HTTP status code
-          example: 404
-        error:
-          type: string
-          description: The HTTP status message
-          example: "Not Found"
-        message:
-          type: string
-          description: |
-            A message from the server indicating the cause or possible resolution of the error.
-          example: "Resource not found"
-      required:
-        - statusCode
-        - error
+      $ref: "../../schemas/errors/not-found.yml"
