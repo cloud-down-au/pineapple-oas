@@ -1,3 +1,5 @@
+name: Generate OAS documentation
+
 on:
   push:
     branches: [ main ]
