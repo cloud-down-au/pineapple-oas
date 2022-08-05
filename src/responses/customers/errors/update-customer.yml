@@ -1,0 +1,6 @@
+description: |
+  Validation errors when updating new customer
+content:
+  application/json:
+    schema:
+      $ref: "../../../schemas/customers/errors/update-customer-validation-errors.yml"

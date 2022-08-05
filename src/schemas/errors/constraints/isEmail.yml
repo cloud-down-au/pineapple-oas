@@ -1,0 +1,6 @@
+title: isEmailConstraint
+type: object
+properties:
+  isEmail:
+    type: string
+    description: If the property must be a valid email address

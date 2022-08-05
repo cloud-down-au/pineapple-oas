@@ -1,0 +1,18 @@
+description: |
+  A pseudonym is an identifier for a Pineapple customer that exists in a third party system. 
+  
+  The pseudonym can be used to interact directly with the third party system where appropriate,
+  and where permission has been given.
+type: object
+properties:
+  pseudonym:
+    type: string
+    description: The identifier of the customer in a third party system.
+    example: "abc123"
+
+  provider:
+    $ref: "../provider/provider.yml"
+
+required:
+  - pseudonym
+  - provider

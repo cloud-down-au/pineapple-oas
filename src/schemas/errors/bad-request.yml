@@ -5,18 +5,11 @@ properties:
   statusCode:
     type: number
     description: The HTTP status code
-    example: {{ code }}
+    example: 400
   error:
     type: string
     description: The HTTP status message
-    example: {{ error }}
-{{#if message }}
-  message:
-    type: string
-    description: |
-      A message from the server indicating the cause or possible resolution of the error.
-    example: {{ message }}
-{{/if}}
+    example: Bad Request
 required:
   - statusCode
   - error

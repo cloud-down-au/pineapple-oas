@@ -1,0 +1,12 @@
+description: |
+  Indicates that the server cannot or will not process the request due to something that is 
+  perceived to be a client error
+  
+  Responses should contain enough information for clients to interrogate the response and
+  determine the cause of the error.
+  
+  See RFC7231 - https://tools.ietf.org/html/rfc7231#section-6.5.1
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/errors/bad-request.yml"

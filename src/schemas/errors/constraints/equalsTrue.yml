@@ -1,0 +1,6 @@
+title: equalsTrueConstraint
+type: object
+properties:
+  equals:
+    type: string
+    description: If the property must be the boolean value of 'true'

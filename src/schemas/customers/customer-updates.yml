@@ -1,0 +1,29 @@
+description: |
+  Represents what details can be updated for an existing customer.
+  
+  Policies can only be accepted when updating a customer. Otherwise a validation error
+  will be returned.
+type: object
+properties:
+  acceptedDataSharingAgreement:
+    type: boolean
+    description: Whether the customer has accepted Pineapple's Data Sharing Agreement
+    example: true
+
+  acceptedPrivacyAgreement:
+    type: boolean
+    description: Whether the customer has accepted Pineapple's Privacy Agreement
+    example: true
+    default: false
+
+  acceptedTermsAndConditions:
+    type: boolean
+    description: Whether the customer has accepted Pineapple's Terms and Conditions
+    example: true
+    default: false
+
+  displayName:
+    type: string
+    description: The name the customer prefers to be called.
+    example: "Bruce W"
+    default: null

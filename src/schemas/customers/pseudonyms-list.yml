@@ -1,0 +1,5 @@
+description: |
+  A list of pseudonyms for a given customer
+type: array
+items:
+  $ref: "./pseudonym.yml"

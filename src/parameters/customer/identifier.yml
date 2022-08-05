@@ -1,0 +1,6 @@
+name: "id"
+in: "path"
+description: "The customer ID"
+required: true
+schema:
+  $ref: "../../schemas/resource-identifier.yml"

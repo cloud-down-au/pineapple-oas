@@ -1,0 +1,6 @@
+title: isBooleanConstraint
+type: object
+properties:
+  isBoolean:
+    type: string
+    description: If the property must be a boolean

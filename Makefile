@@ -24,10 +24,13 @@ dist: assemble
 docker:
 	docker build -t pineapple-oas .
 
-generate: src/schemas/errors/forbidden.yml src/schemas/errors/not-found.yml src/schemas/errors/server-error.yml src/schemas/errors/unauthorised.yml
+generate: src/schemas/errors/bad-request.yml src/schemas/errors/forbidden.yml src/schemas/errors/not-found.yml src/schemas/errors/server-error.yml src/schemas/errors/unauthorised.yml
 
 serve:
 	$(DOCKER_SERVE) npx redocly preview-docs $(DIST_SPEC) --host=0.0.0.0
+
+src/schemas/errors/bad-request.yml: src/schemas/errors/generic-error.yml.hbs
+	$(DOCKER_RENDER_ERROR) '{ "code": 400, "error": "Bad Request" }' > src/schemas/errors/bad-request.yml
 
 src/schemas/errors/forbidden.yml: src/schemas/errors/generic-error.yml.hbs
 	$(DOCKER_RENDER_ERROR) '{ "code": 403, "error": "Forbidden", "message": "Forbidden resource" }' > src/schemas/errors/forbidden.yml

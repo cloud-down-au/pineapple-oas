@@ -1,0 +1,58 @@
+get:
+  summary: Find Customer
+  description: Attempts to find a customer.
+  operationId: findCustomer
+  security:
+    - partner:
+        - read:customer
+  tags:
+    - Partner
+
+  parameters:
+    - $ref: "../../parameters/customer/query.yml"
+
+  responses:
+    "200":
+      $ref: "../../responses/customers/customer.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"
+
+post:
+  summary: Create Customer
+  description: Create a new customer in Pineapple.
+  operationId: createCustomer
+  security:
+    - partner:
+        - create:customer
+  tags:
+    - Partner
+
+  requestBody:
+    required: true
+    $ref: "../../requests/customer/new-customer.yml"
+
+  responses:
+    "201":
+      $ref: "../../responses/customers/customer.yml"
+
+    "400":
+      $ref: "../../responses/customers/errors/new-customer.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"

@@ -1,0 +1,13 @@
+type: object
+additionalProperties: true
+properties:
+  property:
+    type: string
+    description: The property in the input request that failed validation
+  value:
+    description: |
+      The value of the property that failed validation. 
+      
+      May not be present if a required input property was not provided.
+required:
+  - property

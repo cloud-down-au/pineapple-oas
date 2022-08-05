@@ -1,0 +1,30 @@
+get:
+  summary: Get Customer Pseudonyms
+  description: Retrieves a list of pseudonyms for a customer.
+
+  operationId: getCustomerPseudonyms
+  security:
+    - customer:
+          - read:customer_pseudonyms
+
+  tags:
+    - Customer
+
+  parameters:
+    - $ref: "../../parameters/customer/identifier.yml"
+
+  responses:
+    "200":
+      $ref: "../../responses/customers/pseudonyms-list.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"

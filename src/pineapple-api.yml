@@ -32,6 +32,9 @@ tags:
       Resources that can be used by a Pineapple Partner. Requires an access token that represents the partner.
 
 components:
+  parameters:
+    $ref: "./parameters/_index.yml"
+
   securitySchemes:
     $ref: "./security/_index.yml"
 
@@ -41,5 +44,15 @@ components:
 paths:
   /accounts:
     $ref: "./resources/accounts/root.yml"
+
+  /customer:
+    $ref: "./resources/customer/root.yml"
+
+  /customer/{id}:
+    $ref: "./resources/customer/id.yml"
+
+  /customer/{id}/pseudonyms:
+    $ref: "./resources/customer/pseudonyms.yml"
+
   /customers:
     $ref: "./resources/customers/root.yml"

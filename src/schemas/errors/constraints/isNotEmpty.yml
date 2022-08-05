@@ -1,0 +1,6 @@
+title: isNotEmptyConstraint
+type: object
+properties:
+  isNotEmpty:
+    type: string
+    description: If the property must be a non empty string
