@@ -6,20 +6,20 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  generate-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Docker
+      - name: Setup Docker
         # Have to use master to get SKIP_LOGIN fix
         uses: actions-hub/docker/cli@master
         env:
           SKIP_LOGIN: true
 
-      - name: Check Docker Version
-        run: docker --version
+      - name: Make docker image
+        run: make docker
 
-      - name: Check make version
-        run: make -v
+      - name: Generate docs
+        run: make dist
