@@ -4,7 +4,7 @@ get:
   operationId: getCustomerPseudonyms
   security:
     - customer:
-          - read:customer_pseudonyms
+      - read:customer_pseudonyms
 
   tags:
     - Customer
