@@ -25,11 +25,15 @@ servers:
 tags:
   - name: Customer
     description: |
-      Resources that relates to an individual customer. Requires an access token for that specific customer.
+      Resources that relates to an individual customer.
+      
+      Requires an access token for that specific customer.
 
   - name: Partner
     description: |
-      Resources that can be used by a Pineapple Partner. Requires an access token that represents the partner.
+      Resources that are not linked to a customer and that can be used by a Pineapple Partner.
+      
+      Requires an access token that represents the partner.
 
 components:
   parameters:
