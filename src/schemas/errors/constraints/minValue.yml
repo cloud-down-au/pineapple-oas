@@ -1,0 +1,6 @@
+title: minValueConstraint
+type: object
+properties:
+  min:
+    type: string
+    description: If the property is lower than a minimum allowed value.

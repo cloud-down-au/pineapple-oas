@@ -1,0 +1,5 @@
+description: Updates for wellbeing scores
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/wellbeing/scores-updates.yml"

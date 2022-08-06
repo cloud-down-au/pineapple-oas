@@ -1,0 +1,20 @@
+description: |
+  Represents what details can be updated for an existing set of wellbeing scores.
+type: object
+properties:
+  surveyScore:
+    type: integer
+    format: int32
+    description: |
+      The customer's survey score.
+      
+      Must be a minimum of 0.
+    example: 2
+
+  username:
+    type: string
+    description: The customers username to update scores for.
+    example: "bruce@wayneenterprises.com"
+required:
+  - surveyScore
+  - username

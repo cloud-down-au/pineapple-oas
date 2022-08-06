@@ -1,0 +1,60 @@
+get:
+  summary: Get WellBeing Scores
+  description: Retrieves financial wellbeing scores for a customer.
+  operationId: getWellbeingScores
+  security:
+    - customer:
+      - wellbeing.score:read
+
+  tags:
+    - Customer
+
+  responses:
+    "200":
+      $ref: "../../responses/wellbeing/scores.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"
+
+patch:
+  summary: Update WellBeing Scores
+  description: Update existing scores.
+  operationId: updateWellbeingScores
+  security:
+    - partner:
+        - wellbeing.score:update
+
+  tags:
+    - Partner
+
+  requestBody:
+    required: true
+    $ref: "../../requests/wellbeing/update-scores.yml"
+
+  responses:
+    "204":
+      description: "Scores successfully updated"
+
+    "400":
+      $ref: "../../responses/wellbeing/errors/update-scores.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"

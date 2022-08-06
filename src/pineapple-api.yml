@@ -57,3 +57,6 @@ paths:
 
   /customers:
     $ref: "./resources/customers/root.yml"
+
+  /wellbeing/scores:
+    $ref: "./resources/wellbeing/scores.yml"

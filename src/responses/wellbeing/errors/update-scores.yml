@@ -1,0 +1,6 @@
+description: |
+  Validation errors when updating a customer's wellbeing scores.
+content:
+  application/json:
+    schema:
+      $ref: "../../../schemas/wellbeing/errors/update-scores-validation-errors.yml"

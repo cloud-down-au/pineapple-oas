@@ -1,0 +1,6 @@
+title: isNumberConstraint
+type: object
+properties:
+  isNumber:
+    type: string
+    description: If the property must be a number

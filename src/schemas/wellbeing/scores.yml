@@ -1,0 +1,34 @@
+description: |
+  Represents the customers financial wellbeing scores.
+type: object
+properties:
+  surveyScore:
+    type: integer
+    format: int32
+    description: The customer's survey score
+    example: 2
+  dishonoursScore:
+    type: integer
+    format: int32
+    description: The customer's dishonours score
+    example: 0
+  paydayScore:
+    type: integer
+    format: int32
+    description: The customer's payday score
+    example: 1
+  solvencyAssetsScore:
+    type: integer
+    format: int32
+    description: The customer's solvency, assets score
+    example: 2
+  solvencyAssetsAndCreditScore:
+    type: integer
+    format: int32
+    description: The customer's solvency, assets, and credit score
+    example: 1
+  balancePercentileScore:
+    type: integer
+    format: int32
+    description: The customer's balance percentile score
+    example: 2
