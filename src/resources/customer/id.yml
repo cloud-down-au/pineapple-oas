@@ -5,11 +5,8 @@ patch:
   security:
     - customer:
         - update:customer
-    - partner:
-        - update:customer
   tags:
     - Customer
-    - Partner
 
   parameters:
     - $ref: "../../parameters/customer/identifier.yml"
@@ -44,11 +41,8 @@ delete:
   security:
     - customer:
         - delete:customer
-    - partner:
-        - delete:customer
   tags:
     - Customer
-    - Partner
 
   parameters:
     - $ref: "../../parameters/customer/identifier.yml"
