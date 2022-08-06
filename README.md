@@ -1,6 +1,8 @@
 # pineapple-oas
 Specification for [Pineapple][7] API
 
+The specification is currently published at https://cloud-down-au.github.io/pineapple-oas/api.html
+
 # Structure
 
 To manage the complexity of the API definition, the API spec is modularised as much as is
@@ -64,6 +66,17 @@ To make a final distribution suitable for hosting
 $ make dist
 ```
 
+## Using templates
+
+The OAS templating language does not allow very sophisticated reuse capabilities. [$ref][8] is
+about it.
+
+To allow for the creation of multiple schema types that have the same structure but different
+data, [handlebars][9] templates can be used to render OAS sections that can then be included
+with `$ref` in OAS documents.
+
+The tools docker image contains the `hbs` cli tool, and the Makefile orchestrates the generation
+of sections from HBS templates.
 <hr>
 
 1: Credit to [David Garcia][5] for his blog post outlining how to modularise an Open API spec.
@@ -75,3 +88,5 @@ $ make dist
 [5]: https://docs.docker.com/engine/reference/builder/
 [6]: https://davidgarcia.dev/posts/how-to-split-open-api-spec-into-multiple-files/
 [7]: https://www.addpineapple.com
+[8]: https://swagger.io/docs/specification/using-ref/
+[9]: https://handlebarsjs.com/
