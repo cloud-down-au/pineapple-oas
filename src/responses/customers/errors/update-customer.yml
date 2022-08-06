@@ -1,5 +1,5 @@
 description: |
-  Validation errors when updating new customer
+  Validation errors when updating a customer
 content:
   application/json:
     schema:
