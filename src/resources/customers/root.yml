@@ -4,7 +4,7 @@ get:
   operationId: getCustomers
   security:
     - partner:
-        - read:customers
+        - customers.details:read
   tags:
     - Partner
   responses:

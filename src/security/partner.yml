@@ -5,7 +5,6 @@ flows:
   clientCredentials:
     tokenUrl: https://auth.addpineapple.com/oauth/token
     scopes:
-      create:customer: "Create a new customer"
-      delete:customer: "Delete an existing customer"
-      read:customers: "Get a list of customers"
-      update:score: "Update the customer's financial wellbeing score"
+      customer:create: "Create a new customer"
+      customers.details:read: "Get a list of customers"
+      wellbeing.score:update: "Update the customer's financial wellbeing score"

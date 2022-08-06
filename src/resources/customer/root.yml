@@ -4,7 +4,7 @@ get:
   operationId: findCustomer
   security:
     - partner:
-        - read:customer
+        - customer.detail:read
   tags:
     - Partner
 
@@ -33,7 +33,7 @@ post:
   operationId: createCustomer
   security:
     - partner:
-        - create:customer
+        - customer:create
   tags:
     - Partner
 

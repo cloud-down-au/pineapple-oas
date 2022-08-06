@@ -4,7 +4,7 @@ patch:
   operationId: updateCustomer
   security:
     - customer:
-        - update:customer
+        - customer.details:update
   tags:
     - Customer
 
@@ -40,7 +40,7 @@ delete:
   operationId: deleteCustomer
   security:
     - customer:
-        - delete:customer
+        - customer:delete
   tags:
     - Customer
 
