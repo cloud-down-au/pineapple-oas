@@ -6,5 +6,6 @@ flows:
     tokenUrl: https://auth.addpineapple.com/oauth/token
     scopes:
       customer:create: "Create a new customer"
+      customer.detail:read: "Read details of a customer"
       customers.details:read: "Get a list of customers"
       wellbeing.score:update: "Update the customer's financial wellbeing score"

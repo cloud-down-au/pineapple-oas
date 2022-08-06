@@ -1,19 +1,75 @@
+delete:
+  summary: Delete Customer
+  description: Delete a customer from Pineapple.
+  operationId: deleteCustomer
+  security:
+    - customer:
+        - customer:delete
+  tags:
+    - Customer
+
+  responses:
+    "204":
+      description: "Customer successfully deleted"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"
+
 get:
-  summary: Find Customer
-  description: Attempts to find a customer.
-  operationId: findCustomer
+  summary: Get Customer
+  description: Retrieves a customer's details
+  operationId: getCustomer
   security:
     - partner:
         - customer.detail:read
   tags:
-    - Partner
-
-  parameters:
-    - $ref: "../../parameters/customer/query.yml"
+    - Customer
 
   responses:
     "200":
       $ref: "../../responses/customers/customer.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"
+
+patch:
+  summary: Update Customer
+  description: Update an existing customers details.
+  operationId: updateCustomer
+  security:
+    - customer:
+        - customer.details:update
+  tags:
+    - Customer
+
+  requestBody:
+    required: true
+    $ref: "../../requests/customer/update-customer.yml"
+
+  responses:
+    "204":
+      description: "Customer successfully updated"
+
+    "400":
+      $ref: "../../responses/customers/errors/update-customer.yml"
 
     "401":
       $ref: "../../responses/errors/unauthorised.yml"

@@ -52,10 +52,7 @@ paths:
   /customer:
     $ref: "./resources/customer/root.yml"
 
-  /customer/{id}:
-    $ref: "./resources/customer/id.yml"
-
-  /customer/{id}/pseudonyms:
+  /customer/pseudonyms:
     $ref: "./resources/customer/pseudonyms.yml"
 
   /customers:
