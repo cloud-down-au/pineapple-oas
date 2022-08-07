@@ -23,7 +23,7 @@ properties:
     example: "Bruce W"
 
   id:
-    $ref: "../resource-identifier.yml"
+    $ref: "../common/resource-identifier.yml"
 
   username:
     type: string

@@ -3,4 +3,4 @@ in: "path"
 description: "The customer ID"
 required: true
 schema:
-  $ref: "../../schemas/resource-identifier.yml"
+  $ref: "../../schemas/common/resource-identifier.yml"

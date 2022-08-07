@@ -14,4 +14,4 @@ ProviderAggregationState:
   $ref: "./provider/aggregation-state.yml"
 
 ResourceIdentifier:
-  $ref: "./resource-identifier.yml"
+  $ref: "./common/resource-identifier.yml"

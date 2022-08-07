@@ -35,7 +35,7 @@ properties:
     example: "100.23"
 
   id:
-    $ref: "../resource-identifier.yml"
+    $ref: "../common/resource-identifier.yml"
 
   institution:
     $ref: "../institution.yml"
