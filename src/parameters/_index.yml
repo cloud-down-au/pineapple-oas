@@ -1,2 +1,2 @@
 CustomerIdentifier:
-  $ref: "./customer/identifier.yml"
+  $ref: "./customer/customer-identifier.yml"
