@@ -1,4 +1,4 @@
-name: "id"
+name: "accountId"
 in: "path"
 description: "The account ID"
 required: true

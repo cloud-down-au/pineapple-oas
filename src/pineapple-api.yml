@@ -49,7 +49,7 @@ paths:
   /accounts:
     $ref: "./resources/accounts/root.yml"
 
-  /account/{id}/transactions:
+  /account/{accountId}/transactions:
     $ref: "./resources/account/transactions.yml"
 
   /customer:

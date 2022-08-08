@@ -1,4 +1,4 @@
-name: "id"
+name: "customerId"
 in: "path"
 description: "The customer ID"
 required: true
