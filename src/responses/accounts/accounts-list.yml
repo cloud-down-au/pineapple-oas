@@ -3,3 +3,8 @@ content:
   application/json:
     schema:
       $ref: "../../schemas/accounts/accounts-list.yml"
+links:
+  Transactions For Account:
+    operationId: getTransactionsForAccount
+    parameters:
+      accountId: $response.body#/accounts/*/id
