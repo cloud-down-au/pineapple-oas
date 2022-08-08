@@ -1,0 +1,5 @@
+description: |
+  A list of transactions for an account.
+type: array
+items:
+  $ref: "./transaction.yml"

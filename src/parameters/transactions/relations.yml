@@ -1,0 +1,20 @@
+name: "relations"
+in: "query"
+description: |
+  Specifies additional data about the transaction to return.
+  
+  Additional data may include merchant details (if the transaction occurred at a merchant) or
+  categorisation of the transaction. Additional data is derived from the plain transaction data
+  and may not be available immediately after a transaction appears in Pineapple.
+  
+  Loading additional data increases processing time, and may not be necessary depending on a
+  client's requirements. By requesting only the additional data needed, a client can make the
+  tradeoff between wait times and what is needed by the client.
+required: false
+schema:
+  type: array
+  items:
+    type : string
+    enum:
+      - merchant_details
+      - categories

@@ -1,0 +1,78 @@
+description: |
+  Represents a copy of an account held with a financial institution.
+  
+  Data is current as of the last time Pineapple synchronised with the provider of the
+  data (eg: Basiq)
+type: object
+properties:
+  amount:
+    type: string
+    description: The amount of the transaction.
+    example: "100.23"
+
+  categories:
+    description: TODO
+
+  createdAt:
+    type: string
+    format: date-time
+    description: The timestamp of when the transaction data was entered into Pineapple.
+    example: "2021-09-08T19:01:06.659Z"
+
+  guestDescription:
+    type: string
+    description: |
+      A description of the transaction as entered by the account owner.
+    example: ""
+
+  id:
+    $ref: "../common/resource-identifier.yml"
+
+  lastUpdatedAt:
+    type: string
+    format: date-time
+    description: The timestamp of when the transaction data was last updated in Pineapple.
+    example: "2021-09-08T19:01:06.659Z"
+
+  merchantDetails:
+    type: array
+    description: |
+      List of merchant details for a transaction.
+      
+      If no merchant details are present for a transaction, or if the `merchant_details` flag
+      was not set, the list will be empty.
+    minItems: 0
+    items:
+      $ref: "./merchant-details.yml"
+
+  prettyDescription:
+    type: string
+    description: |
+      A more human readable form of the transaction description, if one is provided.
+    example: ""
+
+  rawDescription:
+    type: string
+    description: |
+      A description of the transaction as provided by the underlying institution.
+    example: ""
+
+  provider:
+    $ref: "./transactions-provider.yml"
+
+  transactionDate:
+    type: string
+    format: date-time
+    description: The timestamp of when the transaction occurred according to the provider.
+    example: "2021-09-08T19:01:06.659Z"
+
+required:
+  - amount
+  - createdAt
+  - guestDescription
+  - id
+  - lastUpdatedAt
+  - prettyDescription
+  - rawDescription
+  - provider
+  - transactionDate

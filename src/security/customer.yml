@@ -14,4 +14,5 @@ flows:
       customer.details:update: "Update a customer's details"
       customer.pseudonyms:read: "Read list of customer IDs in third party systems"
       accounts:read: "Read a list of customer accounts"
+      account.transactions:read: "Read a list of account transactions"
       wellbeing.score:read: "Read a customer's financial wellbeing score"

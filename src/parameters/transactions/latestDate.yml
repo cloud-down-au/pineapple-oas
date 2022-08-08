@@ -1,0 +1,11 @@
+name: "latestDate"
+in: "query"
+description: |
+  The latest point in time to search for transactions. 
+  
+  If not provided, defaults to "today".
+required: false
+schema:
+  type: string
+  format: date-time
+  example: "2021-09-08"

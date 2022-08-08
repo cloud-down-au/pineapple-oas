@@ -1,0 +1,31 @@
+get:
+  summary: List Account Transactions
+  description: Retrieves a list of transactions for an account
+  operationId: getTransactionsForAccount
+  security:
+    - customer:
+        - account.transactions:read
+  tags:
+    - Customer
+
+  parameters:
+    - $ref: "../../parameters/account/account-identifier.yml"
+    - $ref: "../../parameters/transactions/earliestDate.yml"
+    - $ref: "../../parameters/transactions/latestDate.yml"
+    - $ref: "../../parameters/transactions/relations.yml"
+
+  responses:
+    "200":
+      $ref: "../../responses/transactions/transactions-list.yml"
+
+    "401":
+      $ref: "../../responses/errors/unauthorised.yml"
+
+    "403":
+      $ref: "../../responses/errors/forbidden.yml"
+
+    "404":
+      $ref: "../../responses/errors/not-found.yml"
+
+    "500":
+      $ref: "../../responses/errors/server-error.yml"

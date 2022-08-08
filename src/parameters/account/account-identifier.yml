@@ -1,0 +1,6 @@
+name: "id"
+in: "path"
+description: "The account ID"
+required: true
+schema:
+  $ref: "../../schemas/common/resource-identifier.yml"

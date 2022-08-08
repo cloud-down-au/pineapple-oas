@@ -1,0 +1,22 @@
+description: |
+  A transaction provider is a Provider that Pineapple sources transaction date from, for example
+  Basiq.
+allOf:
+  - $ref: "../provider/provider.yml"
+  - type: object
+    properties:
+      createdAt:
+        type: string
+        format: date-time
+        description: The timestamp of when the account was first aggregated by the provider.
+        example: "2021-09-08T19:01:06.659Z"
+
+      lastUpdatedAt:
+        type: string
+        format: date-time
+        description: The timestamp of when the account was last updated in the providers system.
+        example: "2021-09-08T19:01:06.659Z"
+
+    required:
+      - createdAt
+      - lastUpdatedAt

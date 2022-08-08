@@ -49,6 +49,9 @@ paths:
   /accounts:
     $ref: "./resources/accounts/root.yml"
 
+  /account/{id}/transactions:
+    $ref: "./resources/account/transactions.yml"
+
   /customer:
     $ref: "./resources/customer/root.yml"
 

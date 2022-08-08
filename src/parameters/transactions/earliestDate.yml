@@ -1,0 +1,11 @@
+name: "earliestDate"
+in: "query"
+description: |
+  The earliest point in time to search for transactions. 
+  
+  If not provided, defaults to 3 months in the past from `latestDate`
+required: false
+schema:
+  type: string
+  format: date-time
+  example: "2021-09-08"

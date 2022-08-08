@@ -1,0 +1,5 @@
+description: List of transactions for an account
+content:
+  application/json:
+    schema:
+      $ref: "../../schemas/transactions/transactions-list.yml"

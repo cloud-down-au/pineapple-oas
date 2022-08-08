@@ -1,0 +1,24 @@
+type: object
+properties:
+  aliases:
+    type: array
+    description: Any other names the merchant might be called by.
+    minItems: 0
+    items:
+      type: string
+      example: ""
+
+  logo:
+    type: string
+    description: An optional link to an image file to use as the logo for the merchant.
+    nullable: true
+    example: null
+
+  name:
+    type: string
+    description: The name of the merchant
+    example: Netflix
+
+required:
+  - aliases
+  - name
