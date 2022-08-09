@@ -1,3 +1,4 @@
+title: TransactionsList
 description: |
   A list of transactions for an account.
 type: array

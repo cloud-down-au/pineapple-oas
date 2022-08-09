@@ -1,3 +1,4 @@
+title: AccountMetadata
 description: |
   Meta data about a customer's accounts list
 type: object

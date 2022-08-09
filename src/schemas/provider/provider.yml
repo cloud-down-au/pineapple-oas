@@ -1,3 +1,4 @@
+title: Provider
 description: |
   A provider is a third party system that Pineapple sources data from, for example Basiq.
 type: object

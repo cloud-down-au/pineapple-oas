@@ -1,3 +1,4 @@
+title: AccountsProvider
 description: |
   An account provider is a Provider that Pineapple specifically sources account data from, for
   example Basiq.

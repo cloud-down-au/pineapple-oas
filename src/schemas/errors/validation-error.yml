@@ -1,3 +1,4 @@
+title: ValidationError
 type: object
 additionalProperties: true
 properties:

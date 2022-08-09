@@ -1,3 +1,4 @@
+title: NewCustomerValidationErrors
 allOf:
   - $ref: "../../errors/bad-request.yml"
   - type: object

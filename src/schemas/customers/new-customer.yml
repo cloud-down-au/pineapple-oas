@@ -1,3 +1,4 @@
+title: NewCustomer
 description: |
   Represents the information required to originate a new customer in Pineapple.
 type: object

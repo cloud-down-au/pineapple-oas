@@ -1,4 +1,4 @@
-title: isNumberConstraint
+title: IsNumberConstraint
 type: object
 properties:
   isNumber:

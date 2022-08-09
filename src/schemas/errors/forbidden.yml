@@ -1,4 +1,5 @@
 # Generated from template - do not manually edit
+title: ForbiddenError
 description: Error returned from the API server
 type: object
 properties:

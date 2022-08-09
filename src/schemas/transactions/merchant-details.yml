@@ -1,3 +1,4 @@
+title: MerchantDetails
 type: object
 properties:
   aliases:

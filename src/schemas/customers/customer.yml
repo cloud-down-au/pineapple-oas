@@ -1,3 +1,4 @@
+title: Customer
 description: |
   Represents details of a Pineapple customer.
 type: object

@@ -1,4 +1,4 @@
-title: equalsTrueConstraint
+title: EqualsTrueConstraint
 type: object
 properties:
   equals:

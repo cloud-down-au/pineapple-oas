@@ -1,3 +1,4 @@
+title: ResourceIdentifier
 type: string
 format: uuid
 description: A unique identifier for the resource

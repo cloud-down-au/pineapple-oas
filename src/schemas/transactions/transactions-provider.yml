@@ -1,3 +1,4 @@
+title: TransactionsProvider
 description: |
   A transaction provider is a Provider that Pineapple sources transaction date from, for example
   Basiq.

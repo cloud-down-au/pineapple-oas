@@ -1,4 +1,4 @@
-title: minValueConstraint
+title: MinValueConstraint
 type: object
 properties:
   min:

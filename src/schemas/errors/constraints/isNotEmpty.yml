@@ -1,4 +1,4 @@
-title: isNotEmptyConstraint
+title: IsNotEmptyConstraint
 type: object
 properties:
   isNotEmpty:

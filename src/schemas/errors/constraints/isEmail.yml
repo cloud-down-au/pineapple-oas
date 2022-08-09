@@ -1,4 +1,4 @@
-title: isEmailConstraint
+title: IsEmailConstraint
 type: object
 properties:
   isEmail:
