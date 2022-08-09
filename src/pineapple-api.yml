@@ -36,14 +36,16 @@ tags:
       Requires an access token that represents the partner.
 
 components:
-  parameters:
-    $ref: "./parameters/_index.yml"
+  ###
+  # Parameters will be inserted by the assembling process
+  ###
 
   securitySchemes:
     $ref: "./security/_index.yml"
 
-  schemas:
-    $ref: "./schemas/_index.yml"
+  ###
+  # Schemas will be inserted by the assembling process.
+  ###
 
 paths:
   /accounts:
