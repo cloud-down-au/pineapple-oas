@@ -8,4 +8,4 @@ flows:
       customer:create: "Create a new customer"
       customer.detail:read: "Read details of a customer"
       customers.details:read: "Get a list of customers"
-      wellbeing.score:update: "Update the customer's financial wellbeing score"
+      wellbeing.scores:update: "Update the customer's financial wellbeing scores"
