@@ -1,7 +1,7 @@
 name: "username"
 in: "query"
 description: The username to search for
-required: true
+required: false
 schema:
   type: string
   example: "bruce@wayneenterprises.com"

@@ -1,12 +1,19 @@
 get:
   summary: List Customers
-  description: Retrieves list of Pineapple customers.
+  description: |
+    Retrieves list of Pineapple customers.
+    
+    Optionally takes a query to filter for a specific customer.
   operationId: getCustomers
   security:
     - partner:
         - customers.details:read
   tags:
     - Partner
+
+  parameters:
+    - $ref: "../../parameters/customer/query.yml"
+
   responses:
     "200":
       $ref: "../../responses/customers/customers-list.yml"
