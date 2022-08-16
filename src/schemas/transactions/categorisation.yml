@@ -1,0 +1,38 @@
+title: Categorisation
+description: |
+  A categorisation is some additional data about the transaction.
+type: object
+properties:
+  assignedBy:
+    type: string
+    description: |
+      Who assigned the category to the transaction. It may be an application, or a person.
+    example: "pineapple"
+
+  category:
+    type: string
+    description: |
+      A category that has been assigned to the transaction.
+      
+      The set of possible values is dependent on the owner and may differ between providers.
+    example: "spending"
+
+  logo:
+    type: string
+    description: |
+      An optional logo to use with the category to pictorially represent the category to users.
+      
+      If present, the logo is provided by the owner and may be hosted externally to the API.
+    example: "https://www.addpineapple.com/logos/spending.png"
+
+  owner:
+    type: string
+    description: |
+      The owner of the category. If user assigned, it will be the user, else the provider of the
+      category.
+    example: "pineappleapp"
+
+required:
+  - assignedBy
+  - category
+  - owner
