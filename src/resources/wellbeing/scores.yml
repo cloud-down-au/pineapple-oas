@@ -37,7 +37,6 @@ patch:
     - Partner
 
   requestBody:
-    required: true
     $ref: "../../requests/wellbeing/update-scores.yml"
 
   responses:

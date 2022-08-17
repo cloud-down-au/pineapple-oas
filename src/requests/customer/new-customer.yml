@@ -1,4 +1,5 @@
 description: Details for a new customer
+required: true
 content:
   application/json:
     schema:
