@@ -12,7 +12,9 @@ properties:
     example: "abc123"
 
   provider:
-    $ref: "../provider/provider.yml"
+    allOf:
+      - $ref: "../provider/provider.yml"
+      - description: The provider that has provided the pseudonym.
 
 required:
   - pseudonym

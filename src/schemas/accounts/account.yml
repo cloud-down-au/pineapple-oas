@@ -36,10 +36,14 @@ properties:
     example: "100.23"
 
   id:
-    $ref: "../common/resource-identifier.yml"
+    allOf:
+      - $ref: "../common/resource-identifier.yml"
+      - description: "The identifier for the account"
 
   institution:
-    $ref: "../institution.yml"
+    allOf:
+      - $ref: "../institution.yml"
+      - description: The institution the account was sourced from.
 
   lastUpdatedAt:
     type: string
@@ -55,7 +59,9 @@ properties:
     example: Holiday Funds
 
   provider:
-    $ref: "./accounts-provider.yml"
+    allOf:
+      - $ref: "./accounts-provider.yml"
+      - description: The provider that gave Pineapple the account data.
 
   subtype:
     description: |

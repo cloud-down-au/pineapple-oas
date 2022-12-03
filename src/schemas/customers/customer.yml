@@ -24,7 +24,9 @@ properties:
     example: "Bruce W"
 
   id:
-    $ref: "../common/resource-identifier.yml"
+    allOf:
+      - $ref: "../common/resource-identifier.yml"
+      - description: "The identifier for the customer"
 
   username:
     type: string

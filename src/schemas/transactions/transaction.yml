@@ -31,7 +31,9 @@ properties:
     example: ""
 
   id:
-    $ref: "../common/resource-identifier.yml"
+    allOf:
+      - $ref: "../common/resource-identifier.yml"
+      - description: "The identifier for the transaction"
 
   lastUpdatedAt:
     type: string
@@ -63,7 +65,9 @@ properties:
     example: ""
 
   provider:
-    $ref: "./transactions-provider.yml"
+    allOf:
+      - $ref: "./transactions-provider.yml"
+      - description: The provider that gave Pineapple the transaction data
 
   transactionDate:
     type: string
