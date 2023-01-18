@@ -1,4 +1,6 @@
 title: MerchantDetails
+description: |
+  Information about the merchant where a transaction occurred.
 type: object
 properties:
   aliases:
