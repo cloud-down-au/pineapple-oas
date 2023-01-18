@@ -1,0 +1,16 @@
+title: UpdateWellbeingScoresValidationErrorMessages
+description: |
+  The different type of validation error messages that can be returned when updating a score.
+allOf:
+  - $ref: "../../errors/validation-error.yml"
+  - type: object
+    properties:
+      constraints:
+        type: object
+        description: The constraint that the input property violated.
+        oneOf:
+          - $ref: "../../errors/constraints/isNumber.yml"
+          - $ref: "../../errors/constraints/isNotEmpty.yml"
+          - $ref: "../../errors/constraints/minValue.yml"
+    required:
+      - constraints

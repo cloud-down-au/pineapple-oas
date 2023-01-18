@@ -6,16 +6,4 @@ allOf:
       message:
         type: array
         items:
-          allOf:
-            - $ref: "../../errors/validation-error.yml"
-            - type: object
-              properties:
-                constraints:
-                  type: object
-                  description: The constraint that the input property violated.
-                  oneOf:
-                    - $ref: "../../errors/constraints/equalsTrue.yml"
-                    - $ref: "../../errors/constraints/isBoolean.yml"
-                    - $ref: "../../errors/constraints/isNotEmpty.yml"
-              required:
-                - constraints
+          $ref: "./update-customer-validation-error-messages.yml"

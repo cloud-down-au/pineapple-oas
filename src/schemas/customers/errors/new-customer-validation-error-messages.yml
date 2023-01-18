@@ -1,0 +1,16 @@
+title: NewCustomerValidationErrorMessages
+description: |
+  The different type of validation error messages that can be returned when creating new customers.
+allOf:
+  - $ref: "../../errors/validation-error.yml"
+  - type: object
+    properties:
+      constraints:
+        type: object
+        description: The constraint that the input property violated.
+        oneOf:
+          - $ref: "../../errors/constraints/isBoolean.yml"
+          - $ref: "../../errors/constraints/isEmail.yml"
+          - $ref: "../../errors/constraints/isNotEmpty.yml"
+    required:
+      - constraints
