@@ -9,8 +9,8 @@ allOf:
         type: object
         description: The constraint that the input property violated.
         oneOf:
-          - $ref: "../../errors/constraints/equalsTrue.yml"
-          - $ref: "../../errors/constraints/isBoolean.yml"
-          - $ref: "../../errors/constraints/isNotEmpty.yml"
+          - $ref: "../../errors/constraints/equal-true.yml"
+          - $ref: "../../errors/constraints/is-boolean.yml"
+          - $ref: "../../errors/constraints/is-not-empty.yml"
     required:
       - constraints
