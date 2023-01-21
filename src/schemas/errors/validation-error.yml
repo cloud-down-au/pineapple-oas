@@ -6,6 +6,7 @@ properties:
     type: string
     description: The property in the input request that failed validation
   value:
+    type: string
     description: |
       The value of the property that failed validation. 
       
