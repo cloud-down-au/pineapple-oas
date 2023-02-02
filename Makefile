@@ -22,7 +22,7 @@ dist: assemble
 	@$(DOCKER_CLI) npx redoc-cli build $(DIST_SPEC) --output /oas/dist/doc/index.html
 
 docker:
-	docker build -t pineapple-oas .
+	docker build -t $(DOCKER_IMAGE) .
 
 generate: src/schemas/errors/bad-request.yml \
           src/schemas/errors/forbidden.yml \
