@@ -9,6 +9,7 @@ To manage the complexity of the API definition, the API spec is modularised as m
 possible<sup>1</sup>.
 
 The src tree comprises:
+ - `paramenters` - Definition of HTTP parameters
  - `resources` - The [resources][1] that are offered by the API eg: accounts, transactions, etc.
  - `responses` - Definitions of responses from the server
  - `schemas` - Definitions of representations for the API
@@ -21,19 +22,11 @@ To view the API spec in its entirety, the YAML must be assembled from the parts
 To aid in assembling tools such as [swagger-cli][2] can be used. To view the spec in a human
 friendly format, either [swagger-ui][3] or [redocly][4] can transform the spec into HTML.
 
-A [Dockerfile][5] is provided to build a tools image to assist spec writers. A Makefile is
-also provided for convenience, however the commands are shell commands and can be run without
+This project uses the [oas-builder][5] image to assist spec writers. A Makefile is also
+provided for convenience, however the commands are shell commands and can be run without
 `make` being present.
 
 The examples use `make`.
-
-## Building the image
-
-To build the Docker image
-
-```shell
-$ make docker
-```
 
 ## Assembling the spec
 
@@ -85,7 +78,7 @@ of sections from HBS templates.
 [2]: https://apitools.dev/swagger-cli/
 [3]: https://github.com/swagger-api/swagger-ui/
 [4]: https://redocly.com/
-[5]: https://docs.docker.com/engine/reference/builder/
+[5]: https://hub.docker.com/repository/docker/kierans777/oas-builder
 [6]: https://davidgarcia.dev/posts/how-to-split-open-api-spec-into-multiple-files/
 [7]: https://www.addpineapple.com
 [8]: https://swagger.io/docs/specification/using-ref/
